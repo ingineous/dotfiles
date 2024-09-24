@@ -31,5 +31,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
+alias saymyname="echo Heisenberg"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
