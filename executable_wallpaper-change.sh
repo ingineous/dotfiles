@@ -13,4 +13,5 @@ hyprctl hyprpaper unload all
 
 killall hyprpaper
 
-hyprpaper
+#run hyprpaper in background by nohup
+nohup hyprpaper & 
