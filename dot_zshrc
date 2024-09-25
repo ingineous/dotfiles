@@ -3,6 +3,16 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH="/run/user/1000/fnm_multishells/2533_1727288848946/bin":$PATH
+export FNM_VERSION_FILE_STRATEGY="local"
+export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+export FNM_ARCH="x64"
+export FNM_LOGLEVEL="info"
+export FNM_DIR="/home/dream/.local/share/fnm"
+export FNM_COREPACK_ENABLED="false"
+export FNM_MULTISHELL_PATH="/run/user/1000/fnm_multishells/2533_1727288848946"
+export FNM_RESOLVE_ENGINES="false"
+
 fastfetch
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -33,6 +43,9 @@ source $ZSH/oh-my-zsh.sh
 alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
 alias saymyname="echo Heisenberg"
-alias getobattery="for BAT_PATH in $(upower -e | grep BAT1); do upower -i '$BAT_PATH'; done"
+
+getobattery() {
+	for BAT_PATH in $(upower -e | grep BAT); do upower -i "$BAT_PATH"; done
+}
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
