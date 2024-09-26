@@ -44,6 +44,8 @@ alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
 alias saymyname="echo Heisenberg"
 
+
+# custom functions
 getobattery() {
 	for BAT_PATH in $(upower -e | grep BAT); do upower -i "$BAT_PATH"; done
 }
