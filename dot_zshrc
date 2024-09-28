@@ -44,6 +44,10 @@ alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
 alias saymyname="echo Heisenberg"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # custom functions
 getobattery() {
