@@ -43,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
 alias saymyname="echo Heisenberg"
-alias "177013"="zen-browser nhentai.net"
+alias "177013"="xdg-open https://nhentai.to/g/177013"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
