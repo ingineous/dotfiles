@@ -43,6 +43,7 @@ source $ZSH/oh-my-zsh.sh
 alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
 alias saymyname="echo Heisenberg"
+alias "177013"="zen-browser nhentai.net"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -52,6 +53,10 @@ alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
 # custom functions
 getobattery() {
 	for BAT_PATH in $(upower -e | grep BAT); do upower -i "$BAT_PATH"; done
+}
+
+whois() {
+    echo "Heisenberg"
 }
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
